@@ -1,0 +1,84 @@
+form {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+button:nth-of-type(1) { /* Add Book button */
+  background-color: #28a745;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #218838;
+}
+
+li button:nth-of-type(1) { /* Add to Cart */
+  background-color: #28a745;
+}
+
+li button:nth-of-type(1):hover {
+  background-color: #218838;
+}
+
+li button:nth-of-type(2) { /* Add to Wishlist */
+  background-color: #ffc107;
+}
+
+li button:nth-of-type(2):hover {
+  background-color: #e0a800;
+}
+
+li button:nth-of-type(3) { /* Delete */
+  background-color: #dc3545;
+}
+
+li button:nth-of-type(3):hover {
+  background-color: #c82333;
+}
+
+div:first-of-type select, div:nth-of-type(2) input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--list-bg); /* Dark blue #1e2a44 in dark mode */
+  border: 1px solid var(--list-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--list-border);
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.suggestions li:hover {
+  background-color: var(--input-bg); /* Matches input dark blue #2a3a5c */
+}
+
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

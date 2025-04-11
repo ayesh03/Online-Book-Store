@@ -1,0 +1,91 @@
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Headings: bold and white */
+h2, h3 {
+  color: white;
+  font-weight: bold;
+}
+
+/* Paragraphs: italic */
+p {
+  margin: 15px 0;
+  font-style: italic;
+  color: white;
+}
+
+/* Form: catchy styling */
+form {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f0f4ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs & Textareas: smooth styling */
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+/* List styling */
+ul {
+  display: grid;
+  gap: 15px;
+}
+
+li {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+/* Strong text in list items: white */
+li strong {
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form p,
+  ul p {
+    font-family: 'Pacifico', cursive;
+    color: black;
+  }
+
+  form,
+  ul {
+    gap: 10px;
+  }
+}
+
+/* Optional: Fancy button styling */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

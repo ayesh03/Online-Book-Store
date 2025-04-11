@@ -1,0 +1,11 @@
+<nav>
+  <a routerLink="/books">Books</a>
+  <a routerLink="/cart" *ngIf="authService.isLoggedIn()">Cart</a>
+  <a routerLink="/profile" *ngIf="authService.isLoggedIn()">Profile</a>
+  <a routerLink="/wishlist" *ngIf="authService.isLoggedIn()">Wishlist</a>
+  <button *ngIf="authService.isLoggedIn()" (click)="authService.logout()">Logout</button>
+  <a routerLink="/login" *ngIf="!authService.isLoggedIn()">Login</a>
+  <a routerLink="/register" *ngIf="!authService.isLoggedIn()">Register</a>
+  <button (click)="toggleTheme()">{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}</button>
+</nav>
+<router-outlet></router-outlet>

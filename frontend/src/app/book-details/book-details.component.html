@@ -1,0 +1,34 @@
+<div *ngIf="book">
+    <h2>{{ book.title }}</h2>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Price:</strong> ${{ book.price }}</p>
+    <p><strong>Genre:</strong> {{ book.genre }}</p>
+    <p><strong>Description:</strong> {{ book.description || 'No description available' }}</p>
+  
+    <!-- Add Review Form -->
+    <div>
+      <h3>Add a Review</h3>
+      <form (ngSubmit)="addReview()">
+        <label>Rating (1-5):</label>
+        <input type="number" [(ngModel)]="newReview.rating" name="rating" min="1" max="5" required>
+        <label>Comment:</label>
+        <textarea [(ngModel)]="newReview.comment" name="comment" required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  
+    <!-- Display Reviews -->
+    <div>
+      <h3>Reviews</h3>
+      <ul>
+        <li *ngFor="let review of reviews">
+          <strong>{{ review.userId.email }}</strong> - {{ review.rating }}/5 stars
+          <p>{{ review.comment }}</p>
+          <small>{{ review.createdAt | date }}</small>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="!book">
+    <p>Loading book details...</p>
+  </div>

@@ -1,0 +1,40 @@
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #555555;
+  }
+  
+  ul {
+    display: grid;
+    gap: 15px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #dc3545;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  
+  @media (max-width: 768px) {
+    li {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }

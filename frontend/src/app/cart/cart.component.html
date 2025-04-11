@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Cart</h2>
+  <ul>
+    <li *ngFor="let book of cart">
+      {{ book.title }} - ${{ book.price }}
+      <button (click)="removeFromCart(book._id)">Remove</button>
+    </li>
+  </ul>
+  <p>Total: ${{ total }}</p>
+  <button class="checkout" (click)="checkout()">Checkout</button>
+</div>
